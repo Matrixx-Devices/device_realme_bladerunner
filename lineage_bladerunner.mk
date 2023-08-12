@@ -37,8 +37,8 @@ TARGET_SUPPORTS_QUICK_TAP := true
 # Camera
 TARGET_BUILD_GRAPHENEOS_CAMERA := false
 
-#TARGET_BUILD_APERTURE_CAMERA := true
-TARGET_EXCLUDES_APERTURE := false
+TARGET_BUILD_APERTURE_CAMERA := true
+
 
 # UDFPS ICONS/ANIMATIONS
 TARGET_HAS_UDFPS := true
@@ -51,14 +51,14 @@ WITH_GMS := true
 
 # Opt out of google dialer support, compiler will build aosp dialer,
 # package type will change from PIXEL -> GMS
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
+TARGET_OPTOUT_GOOGLE_TELEPHONY := false
 
 # Compiler will only build GMS playstore services, its dependencies, and Gboard app.
 # package type will change from PIXEL/GMS -> CORE
 TARGET_CORE_GMS := false
 
 # Wether to use google (true) or AOSP (false) telephony package bundle. (defaults: false for gms core, true for pixel builds)
-TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_USE_GOOGLE_TELEPHONY := false
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
