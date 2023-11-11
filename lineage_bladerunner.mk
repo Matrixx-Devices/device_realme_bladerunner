@@ -21,8 +21,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common risingOS stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-#MATRIXX_MAINTAINER
+#For official Devices:
+MATRIXX_BUILD_TYPE := Official
 MATRIXX_MAINTAINER := AAMIR_ALI
+
+#EPPE
+TARGET_DISABLE_EPPE := true
 
 #BOOT_ANIMATION
 TARGET_BOOT_ANIMATION_RES := 1440
@@ -38,9 +42,6 @@ WITH_GAPPS := true
 
 #Device has UDFPS:
 TARGET_HAS_UDFPS := true
-
-TARGET_DISABLE_EPPE := true
-
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
