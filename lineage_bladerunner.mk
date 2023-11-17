@@ -24,6 +24,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 #For official Devices:
 MATRIXX_BUILD_TYPE := Official
 MATRIXX_MAINTAINER := AAMIR_ALI
+MATRIXX_CHIPSET := SM8250
+MATRIXX_BATTERY := 4200mAh
+MATRIXX_DISPLAY := 1080x2400
 
 #EPPE
 TARGET_DISABLE_EPPE := true
