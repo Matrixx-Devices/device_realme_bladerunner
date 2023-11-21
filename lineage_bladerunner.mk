@@ -46,6 +46,9 @@ WITH_GAPPS := true
 #Device has UDFPS:
 TARGET_HAS_UDFPS := true
 
+#Blur effect
+TARGET_ENABLE_BLUR := true
+
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
