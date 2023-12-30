@@ -41,10 +41,7 @@ TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_EXCLUDES_AUDIOFX := true
 
 #Build with Gapps:
-WITH_GAPPS := true
-
-#Add Google Dialer & Messaging
-#EXTRA_GAPPS := true
+WITH_GMS := true
 
 #Device has UDFPS:
 TARGET_HAS_UDFPS := true
@@ -53,7 +50,15 @@ TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 
 #Add Google Contacts, Dialer & Messaging 
-EXTRA_GAPPS := true
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
+
+#Device has UDFPS:
+TARGET_HAS_UDFPS := true
+
+#Blur effect
+TARGET_ENABLE_BLUR := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
