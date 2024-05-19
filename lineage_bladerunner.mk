@@ -49,11 +49,6 @@ TARGET_HAS_UDFPS := true
 #Blur effect
 TARGET_ENABLE_BLUR := true
 
-#Add Google Contacts, Dialer & Messaging 
-BUILD_GOOGLE_CONTACTS := true
-BUILD_GOOGLE_DIALER := true
-BUILD_GOOGLE_MESSAGE := true
-
 #Device has UDFPS:
 TARGET_HAS_UDFPS := true
 
