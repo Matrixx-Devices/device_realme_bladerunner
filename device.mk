@@ -41,6 +41,10 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     init.oplus.perf.rc
+    
+# overlay-lineage    
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Overlays
 PRODUCT_PACKAGES += \
