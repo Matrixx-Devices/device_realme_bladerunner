@@ -262,6 +262,7 @@ PRODUCT_PACKAGES += \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
     OPlusSystemUIResTarget \
+    NcmTetheringOverlay \
     WifiResTarget
 
 # Partitions
