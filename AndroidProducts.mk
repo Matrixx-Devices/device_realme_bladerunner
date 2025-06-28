@@ -1,14 +1,14 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2018-2019 The yaapOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_bladerunner.mk
+    $(LOCAL_DIR)/yaap_bladerunner.mk
 
 
 COMMON_LUNCH_CHOICES := \
-    lineage_bladerunner-user \
-    lineage_bladerunner-userdebug \
-    lineage_bladerunner-eng
+    yaap_bladerunner-user \
+    yaap_bladerunner-userdebug \
+    yaap_bladerunner-eng

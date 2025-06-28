@@ -19,19 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common RisingOS stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/yaap/config/common_full_phone.mk)
 
 #EPPE
 TARGET_DISABLE_EPPE := true
 
 #GMS
-WITH_GMS := true
+TARGET_BUILD_GAPPS := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := rising_bladerunner
+PRODUCT_NAME := yaap_bladerunner
 PRODUCT_DEVICE := bladerunner
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX2076
