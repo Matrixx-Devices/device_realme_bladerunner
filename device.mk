@@ -127,7 +127,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
 # Display
-PRODUCT_COPY_FILES += \Add commentMore actions
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display_id_4630946292801050754.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946292801050754.xml
 
 # DRM
@@ -266,10 +266,6 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti
-
- # Parts
-PRODUCT_PACKAGES += \
-    PerappRefreshRate
 
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
