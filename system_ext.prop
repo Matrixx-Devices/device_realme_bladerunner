@@ -21,6 +21,9 @@ dalvik.vm.dex2oat64.enabled=true
 # DPM
 persist.vendor.dpm.feature=9
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # GPS
 persist.backup.ntpServer=0.pool.ntp.org
 
@@ -28,6 +31,13 @@ persist.backup.ntpServer=0.pool.ntp.org
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# InfinityX props
+ro.product.marketname=Realme X50 Pro 5G
+ro.infinity.soc=Snapdragon® 865
+ro.infinity.battery=4200 mAh
+ro.infinity.display=1264 x 2780, 120 Hz
+ro.infinity.camera=50MP + 8MP + 2MP
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
@@ -41,9 +51,28 @@ persist.vendor.data.mode=concurrent
 
 # Radio
 ril.subscription.types=NV,RUIM
+ro.telephony.sim_slots.count=2
 
 # Sensors
 persist.vendor.sensors.enable.mag_filter=true
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+
+# Log
+persist.log.tag.ACDB-LOADER=S
+persist.log.tag.RippleDrawable=S
+persist.log.tag.BackupHelper=S
+persist.log.tag.ctbc=S
+persist.log.tag.BitmapFactory=S
+persist.log.tag.minksocket=S
+persist.log.tag.gdog=S
+persist.log.tag.SQLiteDatabase=S
+persist.log.tag.ultrasound_extn=S
+persist.log.tag.msm8974_platform=S
+persist.log.tag.NgaGrpcClient=S
+persist.log.tag.QC-time-services=S
+persist.log.tag.CVP=S
+persist.log.tag.CamX=S
+persist.log.tag.SYNX-UMD=S
+persist.log.tag.CHIUSECASE=S
