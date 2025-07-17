@@ -1912,10 +1912,11 @@ odm/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libtrustedapploader.so
 
 # Wifi
-odm/etc/wifi/bin_version
-odm/etc/wifi/regdb.bin
-odm/etc/wifi/regdb_version
 vendor/bin/cnss-daemon
+vendor/etc/wifi/qca6390/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/qca6490/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/p2p_supplicant_overlay.conf
+vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # WiFi Display (system)
 system/framework/WfdCommon.jar;BOOT_JAR

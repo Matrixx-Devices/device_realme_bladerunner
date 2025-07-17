@@ -93,10 +93,11 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 
     
-    
+# Camera vendor symlinks
 PRODUCT_PACKAGES += \
-    libcamera2ndk_vendor \
-    libstdc++.vendor
+    camera_com_qti_stats_haf \
+    camera_com_qti_stats_pdlib \
+    camera_libipebpsstriping
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -378,21 +379,11 @@ PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
-    android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
-    wpa_supplicant
-
-PRODUCT_PACKAGES += \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
-    libwpa_client \
+    wpa_supplicant \
     wpa_supplicant.conf
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_ODM)/vendor/etc/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/qca6390/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml \
@@ -405,10 +396,12 @@ PRODUCT_COPY_FILES += \
 
 # WiFi firmware symlinks
 PRODUCT_PACKAGES += \
-    firmware_wlan_mac.bin_symlink \
-    firmware_WCNSS_qcom_cfg.ini_symlink \
-    firmware_WCNSS_qcom_cfg.ini_qca6390_symlink \
-    firmware_wlanmdsp.otaupdate_symlink
+    wifi_firmware_symlink \
+    firmware_qca6390_WCNSS_qcom_cfg.ini_symlink \
+    firmware_qca6390_wlan_mac.bin_symlink \
+    firmware_qca6490_WCNSS_qcom_cfg.ini_symlink \
+    firmware_qca6490_wlan_mac.bin_symlink
+
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/realme/bladerunner/bladerunner-vendor.mk)
